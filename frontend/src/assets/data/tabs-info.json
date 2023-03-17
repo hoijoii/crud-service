@@ -1,0 +1,69 @@
+{
+  "MENU": [
+    {
+      "id": "1",
+      "name": "HOME",
+      "to": "/",
+      "isSubTab": false
+    },
+    {
+      "id": "2",
+      "name": "BLOGS",
+      "to": "/blogs",
+      "isSubTab": false
+    },
+    {
+      "id": "3",
+      "name": "CATEGORIES",
+      "isSubTab": true,
+      "subTabs": [
+        {
+          "id": "1",
+          "name": "공지사항",
+          "to": "/category/notice"
+        },
+        {
+          "id": "2",
+          "name": "자유게시판",
+          "to": "/category/free"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "LOGIN",
+      "to": "/login",
+      "isSubTab": false
+    }
+  ],
+  "MYPAGE": [
+    {
+      "id": "1",
+      "name": "내 정보",
+      "to": "/mypage"
+    },
+    {
+      "id": "2",
+      "name": "작성글",
+      "to": "/mypage"
+    },
+    {
+      "id": "3",
+      "name": "Logout",
+      "to": "/"
+    }
+  ],
+  "CATEGORIES": [
+    {
+      "id": "1",
+      "name": "공지사항",
+      "to": "/category/notice"
+    },
+    {
+      "id": "2",
+      "name": "자유주제",
+      "to": "/category/free"
+    }
+  ]
+  
+}
