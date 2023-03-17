@@ -11,8 +11,14 @@ const postService = {
         }))
       .catch((err) => ({ status: 400, message: err }))
   },
-  createPost: async (body) => {
-    
+  createPost: async (params) => {
+    return postQueries
+      .createPost(params)
+      .then((result)=>({
+        status: 201,
+        message: 'posting success'
+      }))
+      .catch((err) => ({status: 400, message: err}))
   }
 }
 

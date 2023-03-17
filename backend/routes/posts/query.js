@@ -8,8 +8,16 @@ const Query = {
     return new Promise((resolve, reject) => {
       let countQuery = `SELECT count(*) as count
             FROM crudservice.posts`
-      let query = `SELECT * 
+      let query = `SELECT 
+              p.post_id,
+              p.title,
+              p.content,
+              p.poster,
+              c.category_name,
+              p.created_at,
+              p.view_count
             FROM crudservice.posts p
+            LEFT JOIN crudservice.categories c ON p.category = c.category_id
             ORDER BY p.created_at DESC`;
       db.query(query, (err, result) => {
         if(err) {
@@ -42,11 +50,7 @@ const Query = {
         ON DUPLICATE KEY UPDATE modydt = NOW();`;
 
     db.query(query, (err, result) => {
-      if(err) {
-        reject(err)
-      } else {
-        
-      }
+      err ? reject(err) : resolve(result)
     })
   }
 }
