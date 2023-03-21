@@ -17,6 +17,7 @@
 <script setup lang='ts'>
 import { onMounted, ref, Ref } from "vue"
 import { useRoute, useRouter } from "vue-router"
+import RestUtils from "@/utils/rest-utils";
 import _ from 'lodash'
 import DropDown from "./DropDown.vue";
 
@@ -24,6 +25,7 @@ import DropDown from "./DropDown.vue";
 const route = useRoute()
 const router = useRouter()
 const menus = require('@/assets/data/tabs-info.json').MENU
+//const menus: Ref<Array<any>> = ref([])
 
 // dropdown menu
 const categories: Ref<any> = ref(null)
@@ -34,14 +36,17 @@ const subTabActive = () => {
   console.log(isSubOpen.value)
 }
 
-const clickOutside = (e: any) => {
-  if (e.target !== categories.value) {
-    
-  }
-}
+/* const init = () => {
+  RestUtils.get('/categories/list', null)
+    .then((resp)=>{
+      console.log(resp.data)
+      menus.value = resp.data
+    })
+    .catch((err)=>console.error(err))
+} */
 
 onMounted(()=>{
-  //window.addEventListener('click', clickOutside)
+  //init()
 })
 
 </script>
