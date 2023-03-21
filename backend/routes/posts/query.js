@@ -2,7 +2,6 @@ const { resolve } = require('app-root-path')
 const { result, reject } = require('lodash')
 const db = require('../../config/database');
 
-
 const Query = {
   getPostsList    : () => {
     return new Promise((resolve, reject) => {
@@ -12,12 +11,13 @@ const Query = {
               p.post_id,
               p.title,
               p.content,
-              p.poster,
+              u.nickname,
               c.category_name,
               p.created_at,
               p.view_count
             FROM crudservice.posts p
             LEFT JOIN crudservice.categories c ON p.category = c.category_id
+            LEFT JOIN crudservice.users u ON p.poster = u.user_id
             ORDER BY p.created_at DESC`;
       db.query(query, (err, result) => {
         if(err) {

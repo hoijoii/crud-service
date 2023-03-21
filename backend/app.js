@@ -5,10 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var moviesRouter = require('./routes/movies');
+/* var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users'); */
 var postsRouter = require('./routes/posts/routes');
+var categoriesRouter = require('./routes/categories/routes');
 
 var app = express();
 
@@ -36,10 +36,10 @@ app.use(cors({
 }))
 //app.use('/image', express.static('./upload')) //사용자가 image폴더에 접근하면 실제 서버에서 upload폴더로 맵핑
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/api/movies', moviesRouter);
-app.use('/posts', postsRouter)
+/* app.use('/', indexRouter);
+app.use('/users', usersRouter); */
+app.use('/posts', postsRouter);
+app.use('/categories', categoriesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
