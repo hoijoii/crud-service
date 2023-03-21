@@ -10,7 +10,9 @@ module.exports = defineConfig({
 				/* pathRewrite:{
 					"^/api" : ''
 				} */
-			}
-		}
-	}
-})
+			},
+		},
+	},
+	outputDir: "../backend/public",
+	},
+	)
