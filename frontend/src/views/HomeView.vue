@@ -1,9 +1,25 @@
 <template>
   <div class="home">
     <div id="header">
-      <div class="banner">
+      <!-- <div class="slider">
+        <div class="slides">
+          <div id="slide-1"><img class="slide" src="https://preview.colorlib.com/theme/revive/img/banner/b1.jpg.webp"></div>
+          <div id="slide-2"><img class="slide" src="https://preview.colorlib.com/theme/revive/img/banner/b2.jpg.webp"></div>
+          <div id="slide-3"><img class="slide" src="https://preview.colorlib.com/theme/revive/img/banner/b1.jpg.webp"></div>
+        </div>
+        <div class="slide-page">
+          <a href="#slide-1">1</a>
+          <a href="#slide-2">2</a>
+          <a href="#slide-3">3</a>
+        </div>
+        
+      </div> -->
+
+      <!-- <div class="banner">
+        <span class="material-icons lft-arrow">
+          arrow_back_ios
+        </span>
         <div v-for="post in posts" :key="post.id" class="preview">
-          <!-- <img src="@/assets/images/sky.png"> -->
           <div class="text">
             <div class="category">{{ post.category_name }}</div>
             <div class="title">{{ post.title }}</div>
@@ -14,10 +30,18 @@
             </div>
           </div>
         </div>
-      </div>
+        <span class="material-icons rgt-arrow">
+        arrow_forward_ios
+        </span>
+      </div> -->
     </div>
-    <div id="container">
-
+    <div id="container" class="home-grid">
+      <div class="main">
+        asdf
+      </div>
+      <div class="side">
+        asdf
+      </div>
     </div>
   </div>
 </template>

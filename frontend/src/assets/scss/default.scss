@@ -6,6 +6,7 @@ nav {
 #home {
   position: relative;
   z-index: 1;
+  scroll-behavior: smooth;
 }
 
 #container {
@@ -101,52 +102,59 @@ nav {
 
 #header {
   position: absolute;
-  top: 100px;
-  width: 100%;
+  top: 60px;
+  max-height: 600px;
+  height: 100%;
 }
 
-.banner {
+/* .square {
+  width: 73%;
+  height: 100%;
+  background-color: #13113a;
+}
+ */
+.slider {
+  width: 73%;
+  overflow: hidden;
+  float: right;
+}
+
+.slides {
+  //width: 80%;
   display: flex;
-  height: 50vh;
-  //height: 335.5px;
+  overflow-x: auto;
 }
 
-.banner .preview {
+.slide {
+  width: 98%;
+  height: 100%;
+  max-height: 580px;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 80%;
+  height: 100%;
+  max-height: 580px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
   position: relative;
-  width: 33.333333%;
-  background-image: url('@/assets/images/sky.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 15%);
-  background-blend-mode: multiply;
-  padding: 30px;
-  //padding-top: 250px;
-  //padding-left: 30px;
-}
-
-.preview .text {
-  //background: linear-gradient(to bottom, black);
-  position: absolute;
-  bottom: 33px;
-  //left: 20px;
-}
-
-.banner .category {
-  color: rgb(145, 231, 210);
-}
-
-.banner .title {
-  font-size: 25px;
-  color: white;
-}
-
-.banner .info {
   display: flex;
-  color: white;
-  align-items: center;
+} 
+
+.slider::before {
+  background-color: #13113a;
+  position: absolute;
+  width: 73%;
+  height: 100%;
+  
 }
-
-
 
 /* =============================================================
 
@@ -154,3 +162,17 @@ nav {
 
 =============================================================*/
 
+.home-grid {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  position: relative;
+  top: 800px;
+}
+
+.main {
+  background-color: aliceblue;
+}
+
+.side {
+  background-color: beige;
+}

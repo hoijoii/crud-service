@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div class="title">BLOG</div>
+    <div class="title">NODE VUE CRUD</div>
     <div class="menus">
       <span class="menu" v-for="item in menus" :key="item.id">
         <router-link :to="item.to" v-if="!item.isSubTab" :class="['menu-item', {'clicked': route.path === item.to}]">{{ item.name }}</router-link>
