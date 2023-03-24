@@ -10,8 +10,8 @@ nav {
 }
 
 #container {
-  margin: 0 auto;
   width: 1000px;
+  
 }
 
 /* =============================================================
@@ -153,14 +153,7 @@ nav {
   position: absolute;
   width: 73%;
   height: 100%;
-  
 }
-
-/* =============================================================
-
-                           BLOGS
-
-=============================================================*/
 
 .home-grid {
   display: grid;
@@ -175,4 +168,92 @@ nav {
 
 .side {
   background-color: beige;
+}
+
+/* =============================================================
+
+                           BLOGS
+
+=============================================================*/
+
+.list-page {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* =============================================================
+
+                           POST CARD
+
+=============================================================*/
+
+.card {
+  border-radius: 10px;
+  display: inline-block;
+  width: 290px;
+  cursor: pointer;
+  background-color: #f9f9ff;
+  color: #71708a;
+}
+
+.card:hover {
+  //box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.13);
+  transition: all 0.4s ease 0s;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card:hover img {
+  
+}
+
+.card .attach {
+  width: 290px;
+  height: 248.1px;
+  overflow-y: hidden;
+}
+
+.card .attach img {
+  width: 290px;
+  border-radius: 10px;
+}
+
+.card .post {
+  padding: 40px;
+}
+
+.card .post-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #13113a;
+}
+
+.card .post-info, .post-bottom {
+  display: flex;
+  margin: 20px 0px;
+}
+
+.card .post-content {
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  max-height: 75px;
+
+  word-wrap: break-word;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.card .icon {
+  font-size: 16px;
+}
+
+.card .more {
+  color: #13113a;
 }
