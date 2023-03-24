@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postsRouter = require('./routes/posts/routes');
 var categoriesRouter = require('./routes/categories/routes');
+var commentsRouter = require('./routes/comments/routes');
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use(cors({
 app.use('/users', usersRouter);
 app.use('/posts', postsRouter);
 app.use('/categories', categoriesRouter);
+app.use('/comments', commentsRouter);
 app.use('/', indexRouter);
 app.use(history())
 

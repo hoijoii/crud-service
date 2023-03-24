@@ -4,6 +4,7 @@ const db = require('../../config/database');
 
 const Query = {
   getPostsList    : () => {
+    const commentCount = `SELECT count(*) FROM crudservice.comments c WHERE c.post = p.post_id`
     return new Promise((resolve, reject) => {
       let countQuery = `SELECT count(*) as count
             FROM crudservice.posts`
@@ -11,10 +12,11 @@ const Query = {
               p.post_id,
               p.title,
               p.content,
-              u.nickname,
+              u.nickname as poster,
               c.category_name,
               p.created_at,
-              p.view_count
+              p.view_count,
+              (${commentCount}) as comment_cnt
             FROM crudservice.posts p
             LEFT JOIN crudservice.categories c ON p.category = c.category_id
             LEFT JOIN crudservice.users u ON p.poster = u.user_id
