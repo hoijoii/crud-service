@@ -96,6 +96,16 @@ nav {
 
 /* =============================================================
 
+                          SIDEBAR
+
+=============================================================*/
+.sidebar {
+  
+}
+
+
+/* =============================================================
+
                           HOME
 
 =============================================================*/
@@ -107,12 +117,6 @@ nav {
   height: 100%;
 }
 
-/* .square {
-  width: 73%;
-  height: 100%;
-  background-color: #13113a;
-}
- */
 .slider {
   width: 73%;
   overflow: hidden;
@@ -155,7 +159,7 @@ nav {
   height: 100%;
 }
 
-.home-grid {
+/* .home-grid {
   display: grid;
   grid-template-columns: 4fr 2fr;
   position: relative;
@@ -168,7 +172,7 @@ nav {
 
 .side {
   background-color: beige;
-}
+} */
 
 /* =============================================================
 
@@ -197,13 +201,15 @@ nav {
   cursor: pointer;
   background-color: #f9f9ff;
   color: #71708a;
+  transition: all 0.4s ease 0s;
 }
 
 .card:hover {
   //box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.13);
   transition: all 0.4s ease 0s;
   background-color: white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  //box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
 .card:hover img {

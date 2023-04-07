@@ -40,7 +40,7 @@
         asdf
       </div>
       <div class="side">
-        asdf
+        
       </div>
     </div>
   </div>
@@ -51,6 +51,7 @@
 import { onMounted, ref, Ref } from 'vue'
 import RestUtils from '@/utils/rest-utils'
 import StringUtils from '@/utils/string-utils'
+
 
 const tabs = require('@/assets/data/tabs-info.json')
 
